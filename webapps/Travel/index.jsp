@@ -1,8 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.sql.*" %>
-<% String ip ="140.120.54.114:3306"; String user="jspuser"; String pwd="jspuser"; String db="jspuser"; String driver="com.mysql.jdbc.Driver"; Connection con = null; Statement stmt = null; ResultSet rs =null; try{ String url =
-"jdbc:mysql://"+ip+"/"+db+"?useUnicode=true&characterEncoding=utf-8"; Class.forName(driver).newInstance(); con=DriverManager.getConnection(url,user,pwd); stmt=con.createStatement(); String sql="select*from travel;"; rs = stmt.executeQuery(sql);
-}catch(Exception ex){ out.println(ex); } %>
+<jsp:useBean id = "database" class = "com.database.Database">
+  <jsp:setProperty property="ip" name="database" value="140.120.54.114" />
+  <jsp:setProperty property="port" name="database" value="3306" />
+  <jsp:setProperty property="db" name="database" value="jspuser" />
+  <jsp:setProperty property="user" name="database" value="jspuser" />
+  <jsp:setProperty property="password" name="database" value="jspuser" />
+</jsp:useBean>
+<%
+  database.connectDB();
+  database.query("select * from travel_travel;");
+  ResultSet rs = database.getRS();
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,8 +42,13 @@
                 </nav>
             </div>
             <div class="row">
-                <% if(rs !=null){ while(rs.next()){ String id =rs.getString("id"); String name=rs.getString("name") ; String photo=rs.getString("photo") ; String location=rs.getString("location") ; String description=rs.getString("description") ; String
-                createdAt=rs.getString("createdAt") ; %>
+                <% if(rs !=null){ while(rs.next()){
+                  String id =rs.getString("id");
+                  String name=rs.getString("name") ;
+                  String photo=rs.getString("photo") ;
+                  String location=rs.getString("location") ;
+                  String description=rs.getString("description") ;
+                  String createdAt=rs.getString("createdAt") ; %>
                 <div class="col s6">
                     <div class="card horizontal">
                         <div class="card-image" style="padding:2vh;">
