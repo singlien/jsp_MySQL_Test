@@ -56,6 +56,7 @@
    out.println(ex);
  }
 %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -96,7 +97,8 @@
             }
           }
           %>
-          <%if(x==0 && y==0){%>
+
+        <%if(x==0 && y==0){%>
             <script>$("#test").html("登入失敗");</script>
             <p>帳號或密碼錯誤</p>
             <input type="button" onclick="window.open('new.jsp','_self')" value="創建新賬號"/>
