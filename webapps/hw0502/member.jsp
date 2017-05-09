@@ -88,7 +88,7 @@
                   <br>
                   電話號碼：<%=phonet%>
                   <br>
-                  <input type="button" id="login" onclick="window.open('index.jsp','_self')" value="回到登入畫面"/>
+                  <input type="button" id="login" onclick="window.open('index.html','_self')" value="回到登入畫面"/>
                   <%
                   x+=1;
                   break;
@@ -107,7 +107,7 @@
             <p>帳號已被使用</p>
             <br>
             <input type="button" onclick="history.back()" value="返回註冊頁面"/>
-            <input type="button" onclick="window.open('index.jsp','_self')" value="回到登入畫面"/>
+            <input type="button" onclick="window.open('index.html','_self')" value="回到登入畫面"/>
         <%}%>
       </form>
     </section>
