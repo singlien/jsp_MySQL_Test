@@ -39,9 +39,9 @@
           <br>
           <input name="name" type="text" placeholder="姓名" autocomplete="off"/>
           <br>
-          <input name="birth" type="text" placeholder="生日" autocomplete="off"/>
+          <input name="birth" type="date" placeholder="生日" autocomplete="off"/>
           <br>
-          <input name="email" type="text" placeholder="電子郵件" autocomplete="off"/>
+          <input name="email" type="email" placeholder="電子郵件" autocomplete="off"/>
           <br>
           <input name="phone" type="text" placeholder="電話號碼" autocomplete="off"/>
           <br>
