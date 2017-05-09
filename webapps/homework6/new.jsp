@@ -36,7 +36,7 @@
       <section id="content">
         <h1>註冊</h1>
         <form action="member.jsp" method="post">
-          <%-- <input name="account" type="text" placeholder="帳號*" autocomplete="off" autofocus required/> --%>
+          <input name="account" type="text" placeholder="帳號*" autocomplete="off" autofocus required/>
           <br>
           <input name="password" type="password" id="password" placeholder="密碼*" pattern="[A-Za-z0-9]{6,12}" title="請輸入6-12英文字母或數字" required/>
           <br>
