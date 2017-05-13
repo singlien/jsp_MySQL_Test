@@ -16,13 +16,13 @@
  String account = request.getParameter("account");
 
  String message="";
- if(account !=null && !account.equals("*")){
+ if(account !=null){
    try{
      database.connectDB();
      String sql = "select * from person;"; // Catch every data from 'person'
      database.query(sql);
      rs = database.getRS();
-     if(rs!=null){
+     if(rs!=null && !account.equals("*")){
        while(rs.next()){
          String accountData = rs.getString("account");
          if(account.equals(accountData)){ 
