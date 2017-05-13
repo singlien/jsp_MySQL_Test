@@ -94,7 +94,7 @@
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-      <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
+      <button type="button" class="button buttonBlue" onclick="window.open('find.html','_self');">Find users
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
       <%
