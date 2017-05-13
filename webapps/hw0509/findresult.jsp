@@ -53,28 +53,28 @@
     	// Print all accounts in database
     	%>
     	<div class="center">
-	    	<table>
-	    	  <tr>
-			    <td>Account</td>
-	 		    <td>Password</td>
-	   		 	<td>Name</td>
-	    		<td>Birthday</td>
-	    		<td>E-mail</td>
-	    		<td>Phone</td>
-	    		<td>Created at</td>
-			  </tr>
-	    	<%while(rs.next()){%>
-				<tr>
-					<th><%=rs.getString("account")%></th>
-					<th><%=rs.getString("password")%></th>
-					<th><%=rs.getString("name")%></th>
-					<th><%=rs.getString("birth")%></th>
-					<th><%=rs.getString("email")%></th>
-					<th><%=rs.getString("phone")%></th>
-					<th><%=rs.getString("timestamp")%></th>
-				</tr>
-	    	<%}%>
-			</table>
+    	<table>
+    	  <tr>
+		    <td>Account</td>
+ 		    <td>Password</td>
+   		 	<td>Name</td>
+    		<td>Birthday</td>
+    		<td>E-mail</td>
+    		<td>Phone</td>
+    		<td>Created at</td>
+		  </tr>
+    	<%while(rs.next()){%>
+			<tr>
+				<th><%=rs.getString("account")%></th>
+				<th><%=rs.getString("password")%></th>
+				<th><%=rs.getString("name")%></th>
+				<th><%=rs.getString("birth")%></th>
+				<th><%=rs.getString("email")%></th>
+				<th><%=rs.getString("phone")%></th>
+				<th><%=rs.getString("timestamp")%></th>
+			</tr>
+    	<%}%>
+		</table>
 		</div>
 		<form>
 		<button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
