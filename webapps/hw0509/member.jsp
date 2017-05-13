@@ -65,7 +65,6 @@
   <meta charset="UTF-8">
   <title><%=message%></title>
   <link rel="stylesheet" href="css/style.css">
-  <script type="js/submit.js"></script>
  
 </head>
 
@@ -91,7 +90,7 @@
       E-Mail：<%=emailt%><br>
       電話號碼：<%=phonet%><br>
        
-      <button type="button" class="button buttonBlue" onclick="logout();">Logout
+      <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
       <button type="button" class="button buttonBlue" onclick="window.open('find.html','_self');">Find users
@@ -110,7 +109,7 @@
       <%if(x==0 && y==0){%> 
         <script>$("#title_message").html("登入失敗");</script>
         <p>帳號或密碼錯誤</p>
-        <button type="button" class="button buttonBlue" onclick="logout();">Logout
+        <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
       <%}%>
@@ -119,7 +118,7 @@
         <!-- Title還是登入失敗 -->
         <p>帳號已被使用</p>
         <br>
-        <button type="button" class="button buttonBlue" onclick="logout();">Sign in
+        <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Sign in
         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>        
         <a href="register.html">Doesn't have a account? Sign up!</a>
