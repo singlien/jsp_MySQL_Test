@@ -66,16 +66,19 @@
 		  </tr>
     	<%while(rs.next()){%>
 			<tr>
-				<th><%rs.getString("account");%></th>
-				<th><%rs.getString("password");%></th>
-				<th><%rs.getString("name");%></th>
-				<th><%rs.getString("birth");%></th>
-				<th><%rs.getString("email");%></th>
-				<th><%rs.getString("phone");%></th>
-				<th><%rs.getString("timestamp");%></th>
+				<th><%=rs.getString("account");%></th>
+				<th><%=rs.getString("password");%></th>
+				<th><%=rs.getString("name");%></th>
+				<th><%=rs.getString("birth");%></th>
+				<th><%=rs.getString("email");%></th>
+				<th><%=rs.getString("phone");%></th>
+				<th><%=rs.getString("timestamp");%></th>
 			</tr>
     	<%}%>
 		</table>
+		<button type="button" class="button buttonBlue" onclick="logout();">Logout
+    	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+      	</button>
   		<%}else{
        	 String namet=rs.getString("name");
        	 String birtht=rs.getString("birth");
@@ -89,7 +92,7 @@
       E-Mail：<%=emailt%><br>
       電話號碼：<%=phonet%><br>
 
-      <%}%>
+      
        
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
@@ -97,7 +100,7 @@
       <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-      
+      <%}%>
     </form>
 <footer>
 <a href="http://www.google.com/" target="_blank">
