@@ -26,7 +26,7 @@
        while(rs.next()){
          String accountData = rs.getString("account");
          if(account.equals(accountData)){ 
-           isFind++;
+           isFind+=1;
            break;
          }
        }
