@@ -14,7 +14,7 @@
  String driver = "com.mysql.jdbc.Driver";
  ResultSet rs = null;
  String account = request.getParameter("account");
-
+ int isFind=0;
  String message="";
  if(account !=null){
    try{
@@ -26,6 +26,7 @@
        while(rs.next()){
          String accountData = rs.getString("account");
          if(account.equals(accountData)){ 
+           isFind++;
            break;
          }
        }
@@ -81,20 +82,25 @@
     	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       	</button>
       	</form>
-  		<%}else{
+
+      <form>
+        <%}else{
+         if(isFind!=0){
        	 String namet=rs.getString("name");
        	 String birtht=rs.getString("birth");
        	 String emailt=rs.getString("email");
        	 String phonet=rs.getString("phone");
       	%>
-      <form>
       <!-- 找到結果 -->
       <!-- Print data -->
       Name：<%=namet%><br>
       Birthday：<%=birtht%><br>
       E-Mail：<%=emailt%><br>
-      Phone：<%=phonet%><br><br>     
-       
+      Phone：<%=phonet%><br><br> 
+      <%else{%>
+ 		Account no match
+      <%}%>
+
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
@@ -103,6 +109,8 @@
       </button>
       <%}%>
     </form>
+ 
+
 <footer>
 <a href="http://www.google.com/" target="_blank">
 <img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
