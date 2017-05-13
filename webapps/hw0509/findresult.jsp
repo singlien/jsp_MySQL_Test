@@ -52,9 +52,9 @@
     	if(account.equals("*")){
     	// Print all accounts in database
     	%>
-    	<div class="center">
     	<table align="center">
-    	  <tr>
+
+    	  <tr class="table_firstRow">
 		    <td>Account</td>
  		    <td>Password</td>
    		 	<td>Name</td>
