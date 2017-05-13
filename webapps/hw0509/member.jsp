@@ -21,7 +21,7 @@
  String phone = request.getParameter("phone");
  int x = 0;int y = 0;
  String message="";
- if(account !=null && password !=null && name !=null && birth !=null && email !=null && phone !=null){
+ if(account !=null && password !=null && name !=null && birth !=null && email !=null && phone !=null){  //註冊
    try{
      database.connectDB();
      String sql = "select * from person;"; // Catch every data from 'person'
@@ -49,7 +49,7 @@
    {
     message="登入成功！";
    }
- try{
+ try{ //登入
    database.connectDB();
    String sql = "select * from person;";
    database.query(sql);
@@ -84,6 +84,7 @@
                   String emailt=rs.getString("email");
                   String phonet=rs.getString("phone");
       %>
+      <!-- 成功登入 -->
       <!-- Print data -->
       姓名：<%=namet%><br>
       生日：<%=birtht%><br>
@@ -93,7 +94,9 @@
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-
+      <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+      </button>
       <%
                   x+=1;
                   break;
