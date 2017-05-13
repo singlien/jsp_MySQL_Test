@@ -41,7 +41,6 @@
   <meta charset="UTF-8">
   <title>Search for users</title>
   <link rel="stylesheet" href="css/style.css">
-  <script type="js/submit.js"></script>
 
 </head>
 
@@ -53,7 +52,7 @@
     	if(account.equals("*")){
     	// Print all accounts in database
     	%>
-    	<table class="center">
+    	<table class='center'>
     	  <tr>
 		    <td>Account</td>
  		    <td>Password</td>
@@ -76,7 +75,7 @@
     	<%}%>
 		</table>
 		<form>
-		<button type="button" class="button buttonBlue" onclick="logout();">Logout
+		<button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
     	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       	</button>
       	</form>
