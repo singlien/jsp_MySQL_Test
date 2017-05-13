@@ -52,7 +52,7 @@
     	if(account.equals("*")){
     	// Print all accounts in database
     	%>
-    	<table>
+    	<table class="center">
     	  <tr>
 		    <td>Account</td>
  		    <td>Password</td>
