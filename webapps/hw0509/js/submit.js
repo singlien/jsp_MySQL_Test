@@ -3,5 +3,5 @@ function submit(){
 }
 
 function logout(){
-	window.open('index.html', '_self')
+	window.open('index.html', '_self');
 }
