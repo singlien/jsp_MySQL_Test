@@ -84,20 +84,21 @@
       	</form>
 
       <form>
-        <%}else{
-         if(isFind!=0){
-       	 String namet=rs.getString("name");
-       	 String birtht=rs.getString("birth");
-       	 String emailt=rs.getString("email");
-       	 String phonet=rs.getString("phone");
+        <%
+        }else{
+     	    if(isFind!=0){ //Found result and print data
+		       	String namet=rs.getString("name");
+		       	String birtht=rs.getString("birth");
+		       	String emailt=rs.getString("email");
+		       	String phonet=rs.getString("phone");
+		       	String createt=rs.getString("timestamp");
       	%>
-      <!-- 找到結果 -->
-      <!-- Print data -->
-      Name：<%=namet%><br>
-      Birthday：<%=birtht%><br>
-      E-Mail：<%=emailt%><br>
-      Phone：<%=phonet%><br><br> 
-      <%}else{%>
+	      Name：<%=namet%><br>
+	      Birthday：<%=birtht%><br>
+	      E-Mail：<%=emailt%><br>
+	      Phone：<%=phonet%><br>
+	      Account created：<%=createt%><br><br> 
+     		 <%}else{%>
  		Account no match!!!
       <%}%>
 
