@@ -16,7 +16,7 @@
  String account = request.getParameter("account");
 
  String message="";
- if(account !=null && account!="*"){
+ if(account !=null && !account.equals("*")){
    try{
      database.connectDB();
      String sql = "select * from person;"; // Catch every data from 'person'
@@ -51,7 +51,7 @@
     <form>
 
     	<%
-    	if(account=="*"){
+    	if(account.equals("*")){
     	// Print all accounts in database
     	%>
     	<table>
