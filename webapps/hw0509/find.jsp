@@ -15,7 +15,7 @@
 <form action="findresult.jsp" method="get">
   <div class="group">
     <input name="account" type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Search-type * to list all users</label>
+    <label>Search(type * to list all users)</label>
   </div>
   <button type="submit" class="button buttonBlue">Submit
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
