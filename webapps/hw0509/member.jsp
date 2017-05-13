@@ -63,7 +63,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title><%=message%></title>
+  <title>登入結果</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
  
