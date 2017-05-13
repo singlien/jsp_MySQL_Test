@@ -14,7 +14,8 @@ hgroup {
 .table_firstRow{
 	font-weight: bold;
 	font-size: 24px;
-/*	background-color: white;*/
+	text-align: center;
+	background-color: white;
 }
 
 h1, h3 { font-weight: 300; }
