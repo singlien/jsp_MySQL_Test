@@ -97,8 +97,8 @@
       Birthday：<%=birtht%><br>
       E-Mail：<%=emailt%><br>
       Phone：<%=phonet%><br><br> 
-      <%else{%>
- 		Account no match
+      <%}else{%>
+ 		Account no match!!!
       <%}%>
 
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
