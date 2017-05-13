@@ -77,23 +77,21 @@
       <%
           if(rs!=null && y==0){
             while(rs.next()){
-              if(account.equals(rs.getString("account"))){      // Find the account then check password
-                if(password.equals(rs.getString("password"))){  // Password also equals
+              if(account.equals(rs.getString("account"))){
+                if(password.equals(rs.getString("password"))){
                   String namet=rs.getString("name");
                   String birtht=rs.getString("birth");
                   String emailt=rs.getString("email");
                   String phonet=rs.getString("phone");
       %>
-      <!-- Print data -->
       姓名：<%=namet%><br>
       生日：<%=birtht%><br>
       E-Mail：<%=emailt%><br>
       電話號碼：<%=phonet%><br>
-       
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-
+      
       <%
                   x+=1;
                   break;
@@ -122,7 +120,7 @@
         <a href="register.html">Doesn't have a account? Sign up!</a>
       <%}%>
     </form>
-    
+
 <footer>
 <a href="http://www.google.com/" target="_blank">
 <img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
