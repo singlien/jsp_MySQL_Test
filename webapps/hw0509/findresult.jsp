@@ -53,7 +53,7 @@
     	// Print all accounts in database
     	%>
     	<div class="center">
-    	<table>
+    	<table align="center">
     	  <tr>
 		    <td>Account</td>
  		    <td>Password</td>
