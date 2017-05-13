@@ -81,25 +81,24 @@
     <label>Password</label>
   </div>
     <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <label>Name</label>
   </div>
     <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="date"><span class="highlight"></span><span class="bar"></span>
+    <label>Birthday</label>
   </div>
     <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <label>Phone</label>
   </div>
-    <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
-  </div>
-  <button type="button" class="button buttonBlue">Login
+
+  <button type="button" class="button buttonBlue">Register
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-  <a href="member.html">Doesn't have a account? Sign up!</a>
+  <button type="button" class="button buttonBlue">Clear
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
 </form>
 <footer>
 <a href="http://www.google.com/" target="_blank">
