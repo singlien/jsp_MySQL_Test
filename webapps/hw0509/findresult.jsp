@@ -48,8 +48,6 @@
   <hgroup>
   <h1>Search Result</h1>
   </hgroup>
-    <form>
-
     	<%
     	if(account.equals("*")){
     	// Print all accounts in database
@@ -66,13 +64,13 @@
 		  </tr>
     	<%while(rs.next()){%>
 			<tr>
-				<th><%=rs.getString("account");%></th>
-				<th><%=rs.getString("password");%></th>
-				<th><%=rs.getString("name");%></th>
-				<th><%=rs.getString("birth");%></th>
-				<th><%=rs.getString("email");%></th>
-				<th><%=rs.getString("phone");%></th>
-				<th><%=rs.getString("timestamp");%></th>
+				<th><%=rs.getString("account")%></th>
+				<th><%=rs.getString("password")%></th>
+				<th><%=rs.getString("name")%></th>
+				<th><%=rs.getString("birth")%></th>
+				<th><%=rs.getString("email")%></th>
+				<th><%=rs.getString("phone")%></th>
+				<th><%=rs.getString("timestamp")%></th>
 			</tr>
     	<%}%>
 		</table>
@@ -85,14 +83,13 @@
        	 String emailt=rs.getString("email");
        	 String phonet=rs.getString("phone");
       	%>
+      <form>
       <!-- 找到結果 -->
       <!-- Print data -->
-      姓名：<%=namet%><br>
-      生日：<%=birtht%><br>
+      Name：<%=namet%><br>
+      Birthday：<%=birtht%><br>
       E-Mail：<%=emailt%><br>
-      電話號碼：<%=phonet%><br>
-
-      
+      Phone：<%=phonet%><br>     
        
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
