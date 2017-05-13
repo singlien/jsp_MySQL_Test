@@ -41,6 +41,7 @@
   <meta charset="UTF-8">
   <title>Search for users</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="js/submit.js"></script>
 
 </head>
 
