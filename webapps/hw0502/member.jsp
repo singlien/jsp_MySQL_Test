@@ -64,6 +64,7 @@
     <title>會員管理</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script type="js/submit.js"></script>
   </head>
   <body>
     <div class="container">
