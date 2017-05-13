@@ -74,9 +74,11 @@
 			</tr>
     	<%}%>
 		</table>
+		<form>
 		<button type="button" class="button buttonBlue" onclick="logout();">Logout
     	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       	</button>
+      	</form>
   		<%}else{
        	 String namet=rs.getString("name");
        	 String birtht=rs.getString("birth");
@@ -89,7 +91,7 @@
       Name：<%=namet%><br>
       Birthday：<%=birtht%><br>
       E-Mail：<%=emailt%><br>
-      Phone：<%=phonet%><br>     
+      Phone：<%=phonet%><br><br>     
        
       <button type="button" class="button buttonBlue" onclick="logout();">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
