@@ -82,10 +82,11 @@
     	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       	</button>
       	</form>
-
+<%
       <form>
-        <%
+        
         }else{
+        
      	    if(isFind!=0){ //Found result and print data
 		       	String namet=rs.getString("name");
 		       	String birtht=rs.getString("birth");
@@ -108,9 +109,9 @@
       <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-      <%}%>
+      
     </form>
- 
+ <%}%>
 
 <footer>
 <a href="http://www.google.com/" target="_blank">
