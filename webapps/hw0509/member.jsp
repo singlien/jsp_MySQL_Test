@@ -16,7 +16,7 @@
  String account = request.getParameter("account");
  String password = request.getParameter("password");
  String name = request.getParameter("name");
- String birth = request.getParameter("birth");
+ String birth = request.getParameter("birthday");
  String email = request.getParameter("email");
  String phone = request.getParameter("phone");
  int x = 0;int y = 0;
