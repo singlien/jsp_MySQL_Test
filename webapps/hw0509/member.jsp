@@ -24,20 +24,20 @@
  if(account !=null && password !=null && name !=null && birth !=null && email !=null && phone !=null){
    try{
      database.connectDB();
-     String sql = "select * from person;";
+     String sql = "select * from person;"; // Catch every data from 'person'
      database.query(sql);
      rs = database.getRS();
      if(rs!=null){
        while(rs.next()){
          String accountData = rs.getString("account");
-         if(account.equals(accountData)){
+         if(account.equals(accountData)){ // Find if any duplicate account
            y+=1;
            break;
          }
        }
-       if(y!=0){
+       if(y!=0){  // If account exists
          message="註冊失敗";
-       }else{
+       }else{     // If account doesn't exist, write a new account into database
          database.insertData(account,password,name,birth,email,phone);
          message="註冊成功";
          }
@@ -45,9 +45,10 @@
      }catch(Exception ex){
        out.println(ex);
      }
-   }else{
+   }else
+   {
     message="登入成功！";
-  }
+   }
  try{
    database.connectDB();
    String sql = "select * from person;";
@@ -57,4 +58,31 @@
    out.println(ex);
  }
 %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%=message%></title>
+  <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+
+<body>
+  <hgroup>
+  <h1><%=message%></h1>
+  </hgroup>
+
+</form>
+<footer>
+<a href="http://www.google.com/" target="_blank">
+<img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
+  <p>You Gotta Love <a href="http://www.google.com/" target="_blank">Google</a></p>
+</footer>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
 
