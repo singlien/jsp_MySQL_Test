@@ -1,4 +1,4 @@
-%@ page language="java" contentType="text/html;charset=UTF-8;" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html;charset=UTF-8;" pageEncoding="UTF-8" %>
 <%@ page language="java" import="java.sql.*" %>
 <jsp:useBean id="database" class="com.database.Database">
   <jsp:setProperty property="ip" name="database" value="140.120.49.205" />
@@ -65,15 +65,64 @@
   <meta charset="UTF-8">
   <title><%=message%></title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="js/submit.js"></script>
  
 </head>
 
 <body>
   <hgroup>
-  <h1><%=message%></h1>
+  <h1 id="title_message"><%=message%></h1>
   </hgroup>
+    <form>
+      <%
+          if(rs!=null && y==0){
+            while(rs.next()){
+              if(account.equals(rs.getString("account"))){      // Find the account then check password
+                if(password.equals(rs.getString("password"))){  // Password also equals
+                  String namet=rs.getString("name");
+                  String birtht=rs.getString("birth");
+                  String emailt=rs.getString("email");
+                  String phonet=rs.getString("phone");
+      %>
+      <!-- Print data -->
+      姓名：<%=namet%><br>
+      生日：<%=birtht%><br>
+      E-Mail：<%=emailt%><br>
+      電話號碼：<%=phonet%><br>
+       
+      <button type="button" class="button buttonBlue" onclick="logout();">Logout
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+      </button>
 
-</form>
+      <%
+                  x+=1;
+                  break;
+                }
+              }
+            }
+          }
+      %>
+      
+      <!-- 帳號或密碼錯誤 -->
+      <%if(x==0 && y==0){%> 
+        <script>$("#title_message").html("登入失敗");</script>
+        <p>帳號或密碼錯誤</p>
+        <button type="button" class="button buttonBlue" onclick="logout();">Logout
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+      <%}%>
+      <!-- 帳號已被使用 -->
+      <%if(y!=0){%>
+        <!-- Title還是登入失敗 -->
+        <p>帳號已被使用</p>
+        <br>
+        <button type="button" class="button buttonBlue" onclick="logout();">Sign in
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>        
+        <a href="register.html">Doesn't have a account? Sign up!</a>
+      <%}%>
+    </form>
+    
 <footer>
 <a href="http://www.google.com/" target="_blank">
 <img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
