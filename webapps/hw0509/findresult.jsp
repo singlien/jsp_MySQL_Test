@@ -41,8 +41,7 @@
   <meta charset="UTF-8">
   <title>Search for users</title>
   <link rel="stylesheet" href="css/style.css">
-<!--   <script src="js/submit.js"></script>
- -->
+
 </head>
 
 <body>
@@ -52,7 +51,7 @@
     <form>
 
     	<%
-    	if(account="*"){
+    	if(account=="*"){
     	// Print all accounts in database
     	%>
     	<table>
