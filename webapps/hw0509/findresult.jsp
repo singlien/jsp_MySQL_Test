@@ -26,7 +26,6 @@
        while(rs.next()){
          String accountData = rs.getString("account");
          if(account.equals(accountData)){ 
-           y+=1;	//Found result
            break;
          }
        }
