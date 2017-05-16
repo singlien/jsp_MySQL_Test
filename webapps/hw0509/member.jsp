@@ -48,7 +48,6 @@
    }else
    {
     message="登入成功！";
-    session.setAttribute("login", "ok");
    }
  try{ //登入
    database.connectDB();
@@ -87,10 +86,25 @@
       %>
       <!-- 成功登入 -->
       <!-- Print data -->
-      姓名：<%=namet%><br>
-      生日：<%=birtht%><br>
-      E-Mail：<%=emailt%><br>
-      電話號碼：<%=phonet%><br>
+      你好，<%=namet%>以下是您的基本資料
+      	<table>
+		  <tr>
+		    <th>姓名</th>
+		    <th><%=namet%></th>
+		  </tr>
+		  <tr>
+		    <td>生日</td>
+		    <td><%=birtht%></td>
+		  </tr>
+		  <tr>
+		    <td>E-Mail</td>
+		    <td><%=emailt%></td>
+		  </tr>
+		  <tr>
+		    <td>電話號碼</td>
+		    <td><%=phonet%></td>
+		  </tr>
+		</table>
        
       <button type="button" class="button buttonBlue" onclick=" window.open('logout.jsp', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
@@ -105,6 +119,8 @@
               }
             }
           }
+        session.setAttribute("login", "ok");
+        session.setAttribute("user", namet);
       %>
       
       <!-- 帳號或密碼錯誤 -->
