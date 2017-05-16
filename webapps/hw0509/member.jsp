@@ -117,7 +117,7 @@
                   break;
                 }
         session.setAttribute("login", "ok");
-        session.setAttribute("user", namet);
+        session.setAttribute("user", rs.getString("name"));
               }
             }
           }
