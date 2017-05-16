@@ -116,11 +116,12 @@
                   x+=1;
                   break;
                 }
+        session.setAttribute("login", "ok");
+        session.setAttribute("user", namet);
               }
             }
           }
-        session.setAttribute("login", "ok");
-        session.setAttribute("user", namet);
+
       %>
       
       <!-- 帳號或密碼錯誤 -->
