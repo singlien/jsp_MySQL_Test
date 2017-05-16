@@ -36,6 +36,8 @@
      }
    }
 %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,72 +49,88 @@
 
 <body>
   <hgroup>
-  <h1>Search Result</h1>
+  <h1>登入無效</h1>
   </hgroup>
-    	<%
-    	if(account.equals("*")){
-    	// Print all accounts in database
-    	%>
-    	<table align="center">
+<!-- 驗證登入 -->
+<%if(!session.getAttribute("login")){
+//Failed to login
+%>
+<form>
+  登入失敗，請重新登入。
+      <button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+</form>
+<%}else%>
+<!-- /////// -->
 
-    	  <tr class="table_firstRow">
-		    <td>Account</td>
- 		    <td>Password</td>
-   		 	<td>Name</td>
-    		<td>Birthday</td>
-    		<td>E-mail</td>
-    		<td>Phone</td>
-    		<td>Created at</td>
-		  </tr>
-    	<%while(rs.next()){%>
-			<tr>
-				<th><%=rs.getString("account")%></th>
-				<th><%=rs.getString("password")%></th>
-				<th><%=rs.getString("name")%></th>
-				<th><%=rs.getString("birth")%></th>
-				<th><%=rs.getString("email")%></th>
-				<th><%=rs.getString("phone")%></th>
-				<th><%=rs.getString("timestamp")%></th>
-			</tr>
-    	<%}%>
-		</table>
-		</div>
-		<form>
-		<button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
-    	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-      	</button>
-      	</form>
-		
-        
-        <%}else{%>
-     	<form>
-
-     	<%    if(isFind!=0){ //Found result and print data
-		       	String namet=rs.getString("name");
-		       	String birtht=rs.getString("birth");
-		       	String emailt=rs.getString("email");
-		       	String phonet=rs.getString("phone");
-		       	String createt=rs.getString("timestamp");
+    <hgroup>
+    <h1>Search Result</h1>
+    </hgroup>
+      	<%
+      	if(account.equals("*")){
+      	// Print all accounts in database
       	%>
-	      Name：<%=namet%><br>
-	      Birthday：<%=birtht%><br>
-	      E-Mail：<%=emailt%><br>
-	      Phone：<%=phonet%><br>
-	      Account created：<%=createt%><br><br> 
-     		 <%}else{%>
- 		Account no match!!!
-      <%}%>
+      	<table align="center">
 
-      <button type="button" class="button buttonBlue" onclick="logout();">Logout
-      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-      </button>
-      <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
-      <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-      </button>
-      
-    	</form>
- <%}%>
+      	  <tr class="table_firstRow">
+  		    <td>Account</td>
+   		    <td>Password</td>
+     		 	<td>Name</td>
+      		<td>Birthday</td>
+      		<td>E-mail</td>
+      		<td>Phone</td>
+      		<td>Created at</td>
+  		  </tr>
+      	<%while(rs.next()){%>
+  			<tr>
+  				<th><%=rs.getString("account")%></th>
+  				<th><%=rs.getString("password")%></th>
+  				<th><%=rs.getString("name")%></th>
+  				<th><%=rs.getString("birth")%></th>
+  				<th><%=rs.getString("email")%></th>
+  				<th><%=rs.getString("phone")%></th>
+  				<th><%=rs.getString("timestamp")%></th>
+  			</tr>
+      	<%}%>
+  		</table>
+  		</div>
+  	      <form>
+  		<button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+      	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        	</button>
+        	</form>
+  		
+          
+          <%}else{%>
+       	<form>
 
+       	<%    if(isFind!=0){ //Found result and print data
+  		       	String namet=rs.getString("name");
+  		       	String birtht=rs.getString("birth");
+  		       	String emailt=rs.getString("email");
+  		       	String phonet=rs.getString("phone");
+  		       	String createt=rs.getString("timestamp");
+        	%>
+  	      Name：<%=namet%><br>
+  	      Birthday：<%=birtht%><br>
+  	      E-Mail：<%=emailt%><br>
+  	      Phone：<%=phonet%><br>
+  	      Account created：<%=createt%><br><br> 
+       		 <%}else{%>
+   		Account no match!!!
+        <%}%>
+
+        <button type="button" class="button buttonBlue" onclick="logout();">Logout
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+        <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+        
+      	</form>
+   <%}%>
+<%}%>
 <footer>
 <a href="http://www.google.com/" target="_blank">
 <img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>

@@ -48,6 +48,7 @@
    }else
    {
     message="登入成功！";
+    session.setAttribute("login", "ok");
    }
  try{ //登入
    database.connectDB();
@@ -94,7 +95,7 @@
       <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
-      <button type="button" class="button buttonBlue" onclick="window.open('find.html','_self');">Find users
+      <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
       <%
@@ -109,6 +110,7 @@
       <!-- 帳號或密碼錯誤 -->
       <%if(x==0 && y==0){%> 
         <script>$("#title_message").html("登入失敗");</script>
+        <%session.removeAttribute("login");%>
         <p>帳號或密碼錯誤</p>
         <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
