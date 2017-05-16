@@ -86,11 +86,11 @@
       %>
       <!-- 成功登入 -->
       <!-- Print data -->
-      你好，<%=namet%>以下是您的基本資料
-      	<table class="t">
+      你好，<%=namet%>以下是您的基本資料<br>
+      	<table>
 		  <tr>
-		    <th>姓名</th>
-		    <th><%=namet%></th>
+		    <td>姓名</td>
+		    <td><%=namet%></td>
 		  </tr>
 		  <tr>
 		    <td>生日</td>
