@@ -87,7 +87,7 @@
       <!-- 成功登入 -->
       <!-- Print data -->
       你好，<%=namet%>以下是您的基本資料
-      	<table>
+      	<table class="t">
 		  <tr>
 		    <th>姓名</th>
 		    <th><%=namet%></th>
