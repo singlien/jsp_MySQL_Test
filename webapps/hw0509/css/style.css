@@ -17,6 +17,13 @@ hgroup {
 	text-align: center;
 	background-color: white;
 }
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
 
 h1, h3 { font-weight: 300; }
 
