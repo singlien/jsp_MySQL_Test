@@ -22,7 +22,7 @@
 
 
   <!-- 驗證登入 -->
-<%if(!session.getAttribute("login")){
+<%if(session.getAttribute("login")!="ok"){
 //Failed to login
 %>
   <hgroup>

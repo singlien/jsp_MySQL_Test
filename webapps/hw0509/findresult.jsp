@@ -48,13 +48,14 @@
 </head>
 
 <body>
+
+<!-- 驗證登入 -->
+<%if(session.getAttribute("login")!="ok"){
+//Failed to login
+%>
   <hgroup>
   <h1>登入無效</h1>
   </hgroup>
-<!-- 驗證登入 -->
-<%if(!session.getAttribute("login")){
-//Failed to login
-%>
 <form>
   登入失敗，請重新登入。
       <button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
