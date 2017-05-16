@@ -92,7 +92,7 @@
       E-Mail：<%=emailt%><br>
       電話號碼：<%=phonet%><br>
        
-      <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
+      <button type="button" class="button buttonBlue" onclick=" window.open('logout.jsp', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
       </button>
       <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
@@ -112,7 +112,7 @@
         <script>$("#title_message").html("登入失敗");</script>
         <%session.removeAttribute("login");%>
         <p>帳號或密碼錯誤</p>
-        <button type="button" class="button buttonBlue" onclick=" window.open('index.html', '_self');">Logout
+        <button type="button" class="button buttonBlue" onclick=" window.open('logout.jsp', '_self');">Logout
         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
       <%}%>

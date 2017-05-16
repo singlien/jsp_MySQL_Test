@@ -30,7 +30,7 @@
   </hgroup>
 <form>
   登入失敗，請重新登入。
-      <button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+      <button type="button" class="button buttonBlue" onclick="window.open('logout.jsp', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
 </form>
@@ -48,7 +48,7 @@
   <button type="submit" class="button buttonBlue">Submit
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-  <button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+  <button type="button" class="button buttonBlue" onclick="window.open('logout.jsp', '_self');">Logout
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
 </form>

@@ -58,7 +58,7 @@
   </hgroup>
 <form>
   登入失敗，請重新登入。
-      <button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+      <button type="button" class="button buttonBlue" onclick="window.open('logout.jsp', '_self');">Logout
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
 </form>
@@ -97,7 +97,7 @@
   		</table>
   		</div>
   	      <form>
-  		<button type="button" class="button buttonBlue" onclick="window.open('index.html', '_self');">Logout
+  		<button type="button" class="button buttonBlue" onclick="window.open('logout.jsp', '_self');">Logout
       	<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         	</button>
         	</form>
@@ -122,7 +122,7 @@
    		Account no match!!!
         <%}%>
 
-        <button type="button" class="button buttonBlue" onclick="logout();">Logout
+        <button type="button" class="button buttonBlue" onclick="window.open('logout.jsp', '_self');">Logout
         <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
         <button type="button" class="button buttonBlue" onclick="window.open('find.jsp','_self');">Find users
