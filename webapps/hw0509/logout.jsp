@@ -33,5 +33,5 @@
 </html>
   <%
   session.removeAttribute("login");
-  response.setRedirect("index.html");
+  response.sendRedirect("index.html");
   %>
