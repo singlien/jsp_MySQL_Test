@@ -114,10 +114,11 @@
       </button>
       <%
                   x+=1;
+                  session.setAttribute("login", "ok");
+     		   	  session.setAttribute("user", rs.getString("name"));
                   break;
                 }
-        session.setAttribute("login", "ok");
-        session.setAttribute("user", rs.getString("name"));
+
               }
             }
           }
