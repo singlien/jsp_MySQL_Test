@@ -34,7 +34,7 @@
       <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
         </button>
 </form>
-<%}else%>
+<%}else{%>
 <!-- /////// -->
 
   <hgroup>
