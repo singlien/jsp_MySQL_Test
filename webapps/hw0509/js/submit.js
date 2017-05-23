@@ -5,7 +5,7 @@ function logout(){
 function dbcheckpasswd(String passwd){
 	String firstpasswd = document.getElementById('dbpasswd');
 	if(firstpasswd.equals(passwd)){
-	return;	
+	return;
 	}else{
 		return;
 	}
@@ -13,6 +13,6 @@ function dbcheckpasswd(String passwd){
 
 function checkEnter(){
 	if(document.getElementsByName('account')[0].value==null){
-		
+
 	}
 }
