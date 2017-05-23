@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Register Page</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/check.js"></script>
 
- 
+
 </head>
 
 <body>
   <hgroup>
-  <h1>Register</h1>
+    <h1>Register</h1>
   </hgroup>
-<form action="member.jsp" method="post">
-  <div class="group">
-    <input name="account" type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Account</label>
-  </div>
-  <div class="group">
-    <input name="password" type="password"><span class="highlight"></span><span class="bar"></span>
-    <label>Password</label>
-  </div>
+  <form action="member.jsp" method="post">
     <div class="group">
-    <input type="password" id="dbpasswd"><span class="highlight"></span><span class="bar"></span>
-    <label>Enter Password Again</label>
-  </div>
+      <input id="account" name="account" type="text"><span class="highlight"></span><span class="bar"></span>
+      <label>Account</label>
+    </div>
     <div class="group">
-    <input name="name" type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
-  </div>
+      <input name="password" type="password"><span class="highlight"></span><span class="bar"></span>
+      <label>Password</label>
+    </div>
     <div class="group">
-    <input name="birthday" type="date"><span class="highlight"></span><span class="bar"></span>
-    <label>Birthday</label>
-  </div>
+      <input type="password" id="dbpasswd"><span class="highlight"></span><span class="bar"></span>
+      <label>Enter Password Again</label>
+    </div>
     <div class="group">
-    <input name="email" type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
-  </div>
+      <input name="name" type="text"><span class="highlight"></span><span class="bar"></span>
+      <label>Name</label>
+    </div>
     <div class="group">
-    <input name="phone" type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Phone</label>
-  </div>
+      <input name="birthday" type="date"><span class="highlight"></span><span class="bar"></span>
+      <label>Birthday</label>
+    </div>
+    <div class="group">
+      <input name="email" type="email"><span class="highlight"></span><span class="bar"></span>
+      <label>Email</label>
+    </div>
+    <div class="group">
+      <input name="phone" type="text"><span class="highlight"></span><span class="bar"></span>
+      <label>Phone</label>
+    </div>
 
-  <button type="submit" class="button buttonBlue">Register
+    <button type="submit" class="button buttonBlue">Register
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-  <button type="reset" class="button buttonBlue">Clear
+    <button type="reset" class="button buttonBlue">Clear
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-</form>
-<footer>
-<a href="http://www.google.com/" target="_blank">
-<img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
-  <p>You Gotta Love <a href="http://www.google.com/" target="_blank">Google</a></p>
-</footer>
+  </form>
+  <footer>
+    <a href="http://www.google.com/" target="_blank">
+      <img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
+    <p>You Gotta Love <a href="http://www.google.com/" target="_blank">Google</a></p>
+  </footer>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
+
 
 </body>
+
 </html>

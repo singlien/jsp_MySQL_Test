@@ -1,7 +1,0 @@
-function submitLogin(){
-	
-}
-
-function submitRegister(){
-	
-}
