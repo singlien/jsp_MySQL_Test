@@ -20,10 +20,7 @@
             var passwdVal = $('#passwd').val();
             var nameVal = $('#name').val();
             // 使用HTTP POST方法送出Ajax請求 
-            $.get('target.jsp', {
-                    name: nameVal,
-                    passwd: passwdVal,
-                },
+            $.get('target.jsp', 
                 function(data) {
                     // 取出XML元素值 
                     $('#result').html(data);
