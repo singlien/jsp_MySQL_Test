@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%
  String  name= request.getParameter("name"));
 
  if(rs.next){
-   out.print(“”);  
+   out.print("name:"+name);  
  }  else {
-   out.print();
+   out.print(name);
  }
 %>
