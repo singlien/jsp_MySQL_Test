@@ -22,14 +22,14 @@
             // 使用HTTP POST方法送出Ajax請求 
             $.get('target.jsp', 
             {
-            	name: nameVal;
+            	name: nameVal
             },
                 function(data) {
                     // 取出XML元素值 
                     $('#result').html(data);
                 }
             );
-            return false;
+            return false;// To prevent from refresh
         });
     });
     </script>
