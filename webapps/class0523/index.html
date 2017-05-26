@@ -20,7 +20,7 @@
             var passwdVal = $('#passwd').val();
             var nameVal = $('#name').val();
             // 使用HTTP POST方法送出Ajax請求 
-            $.post('target.jsp', {
+            $.get('target.jsp', {
                     name: nameVal,
                     passwd: passwdVal,
                 },
@@ -36,8 +36,7 @@
 </head>
 
 <body>
-    <div id="result" class="box"></div>
-    <br/>
+    <br>
     <form>
         <label>姓名: </label>
         <input type="text" id="name" >
@@ -46,5 +45,7 @@
         <input type="text" id="passwd">
 		<input type="submit" value="送出"> 
 </form> 
+    <div id="result"></div>
+
 </body> 
 </html>
