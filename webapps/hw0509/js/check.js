@@ -21,7 +21,7 @@ function checkDuplicateAccount(String response) {
 }
 
 $(document).ready(function() {
-  $("form").submit(function() {
+  $("select[name='passwd']").onclick(function() {
     // 取得表單欄位值
     var nameVal = $('#account').val();
     // 使用HTTP POST方法送出Ajax請求
