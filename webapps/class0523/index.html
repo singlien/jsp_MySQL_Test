@@ -21,6 +21,9 @@
             var nameVal = $('#name').val();
             // 使用HTTP POST方法送出Ajax請求 
             $.get('target.jsp', 
+            {
+            	name: nameVal;
+            },
                 function(data) {
                     // 取出XML元素值 
                     $('#result').html(data);
