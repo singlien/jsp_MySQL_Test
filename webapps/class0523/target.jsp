@@ -2,7 +2,7 @@
 <%
  String  name= request.getParameter("name"));
 
- if(rs.next){
+ if(name=="123"){
    out.print("name:"+name);  
  }  else {
    out.print(name);
