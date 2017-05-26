@@ -3,9 +3,6 @@
  String  name= request.getParameter("name");
  String  passwd =  request.getParameter("passwd");
 
- if(name=="123"){
-   out.print("name:"+name);  
- }  else {
-   out.print(passwd);
- }
+out.println("success");
+out.print(name);
 %>

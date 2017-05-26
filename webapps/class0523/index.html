@@ -23,15 +23,13 @@
             $.post('target.jsp', {
                     name: nameVal,
                     passwd: passwdVal,
-                    type: typeVal
                 },
                 function(data) {
                     // 取出XML元素值 
-                    $('#result').html($(data).find('data').text());
-                    alert("姓名: " + $(data).find('name').text());
+                    $('#result').html(data);
+                    alert(data);
                 }
             );
-            alert('false');
         });
     });
     </script>
